@@ -1,20 +1,25 @@
 {
-  "name": "server",
+  "name": "ocean-park-server",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "Servidor WebSocket NodeJS para Ocean Park / juego cooperativo 2D",
+  "main": "websocketServer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node server.js"
+    "server": "node websocketServer.js",
+    "start": "node websocketServer.js",
+    "check": "node --check websocketServer.js && node --check gameLogic.js && node --check mongo.js"
   },
-  "keywords": [],
+  "keywords": [
+    "websocket",
+    "libgdx",
+    "mongodb",
+    "ocean-park"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
     "dotenv": "^17.4.0",
     "express": "^4.18.2",
-    "keypress": "^0.2.1",
     "mongodb": "^7.1.1",
     "winston": "^3.19.0",
     "ws": "^8.20.0"
